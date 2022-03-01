@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }  
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- STYLIING FOR CARD AND COMPONENTS STARTS ---------- */
+
+main > h2 {
+    color: hsl(186, 14%, 43%);
+}
+
+.main-card {
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* ---------- STYLIING FOR CARD AND COMPONENTS ENDS ---------- */
