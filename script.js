@@ -8,17 +8,67 @@ let twenty_five = document.querySelector(".per-four");
 let fifty = document.querySelector(".per-five");
 let custom = document.querySelector(".per-six");
 
+let tip_content = document.querySelector(".price-output-tip");
+let total_content = document.querySelector(".price-output-total");
 
-const inputProcessing = () => {
-    if ((bill != 0) && (persons !=0)) {
-        
+
+const fiveInputProcessing = () => {
+    let bill_value = Number(bill.value);
+    let persons_value = Number(persons.value);
+    if ((bill_value != 0) && (persons_value !=0)) {
+        let tip = (bill_value * 0.05) / persons_value;
+        let total = (bill_value / persons_value) + tip;
+        tip_content.textContent = String(tip);
+        total_content.textContent = String(total);
     }
 }
 
-bill.addEventListener("focus", inputProcessing);
-persons.addEventListener("focus", inputProcessing);
-five.addEventListener("click", inputProcessing);
-ten.addEventListener("click", inputProcessing);
-fifteen.addEventListener("click", inputProcessing);
-twenty_five.addEventListener("click", inputProcessing);
-fifty.addEventListener("click", inputProcessing);
+const tenInputProcessing = () => {
+    let bill_value = Number(bill.value);
+    let persons_value = Number(persons.value);
+    if ((bill_value != 0) && (persons_value !=0)) {
+        let tip = (bill_value * 0.1) / persons_value;
+        let total = (bill_value / persons_value) + tip;
+        tip_content.textContent = String(tip);
+        total_content.textContent = String(total);
+    }
+}
+
+const fifteenInputProcessing = () => {
+    let bill_value = Number(bill.value);
+    let persons_value = Number(persons.value);
+    if ((bill_value != 0) && (persons_value !=0)) {
+        let tip = (bill_value * 0.15) / persons_value;
+        let total = (bill_value / persons_value) + tip;
+        tip_content.textContent = String(tip);
+        total_content.textContent = String(total);
+    }
+}
+
+const twentyInputProcessing = () => {
+    let bill_value = Number(bill.value);
+    let persons_value = Number(persons.value);
+    if ((bill_value != 0) && (persons_value !=0)) {
+        let tip = (bill_value * 0.25) / persons_value;
+        let total = (bill_value / persons_value) + tip;
+        tip_content.textContent = String(tip);
+        total_content.textContent = String(total);
+    }
+}
+
+const fiftyInputProcessing = () => {
+    let bill_value = Number(bill.value);
+    let persons_value = Number(persons.value);
+    if ((bill_value != 0) && (persons_value !=0)) {
+        let tip = (bill_value * 0.5) / persons_value;
+        let total = (bill_value / persons_value) + tip;
+        tip_content.textContent = String(tip);
+        total_content.textContent = String(total);
+    }
+}
+
+five.addEventListener("click", fiveInputProcessing);
+ten.addEventListener("click", tenInputProcessing);
+fifteen.addEventListener("click", fifteenInputProcessing);
+twenty_five.addEventListener("click", twentyInputProcessing);
+fifty.addEventListener("click", fiftyInputProcessing);
