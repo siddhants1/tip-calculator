@@ -11,6 +11,8 @@ let custom = document.querySelector(".per-six");
 let tip_content = document.querySelector(".price-output-tip");
 let total_content = document.querySelector(".price-output-total");
 
+let button = document.getElementsByTagName("button")[0];
+
 
 const fiveInputProcessing = () => {
     let bill_value = Number(bill.value);
@@ -67,8 +69,16 @@ const fiftyInputProcessing = () => {
     }
 }
 
+const buttonReset = () => {
+    bill.value = "";
+    persons.value = "";
+    tip_content.textContent = "$0";
+    total_content.textContent = "$0";
+}
+
 five.addEventListener("click", fiveInputProcessing);
 ten.addEventListener("click", tenInputProcessing);
 fifteen.addEventListener("click", fifteenInputProcessing);
 twenty_five.addEventListener("click", twentyInputProcessing);
 fifty.addEventListener("click", fiftyInputProcessing);
+button.addEventListener("click", buttonReset);
