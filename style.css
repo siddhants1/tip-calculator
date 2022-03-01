@@ -19,12 +19,158 @@ body {
 
 /* ---------- STYLIING FOR CARD AND COMPONENTS STARTS ---------- */
 
-main > h2 {
+
+.splitter-heading > h2 {
     color: hsl(186, 14%, 43%);
+    text-align: center;
 }
 
 .main-card {
     background-color: hsl(0, 0%, 100%);
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
-/* ---------- STYLIING FOR CARD AND COMPONENTS ENDS ---------- */
+/* --------- MEDIA QUERIES START --------------- */
+
+@media (max-width: 38.75em) {
+    .main-card {
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+    }    
+}
+
+/* xxxxxxxx MEDIA QUERIES START xxxxxxxxxxxxxx */
+
+/* ------- LEFT CARD STYLING STARTS --------- */
+
+.left-input-descriptions {
+    color: hsl(186, 14%, 43%);
+    margin: 1rem auto;
+}
+
+.common-left-input {
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.dollar {
+    background-image: url("icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 5%;
+}
+
+.person {
+    background-image: url("icon-person.svg"); 
+    background-repeat: no-repeat;
+    background-position: 5%;
+}
+
+/* Input percent boxes start */
+
+.left-input-percent-container {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "per-one per-two per-three"
+    "per-four per-five per-six";
+}
+
+
+.left-input-percent-box {
+    border-radius: 0.6rem;
+    text-align: center;
+    padding: 0.8rem;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.per-one {
+    grid-area: per-one;   
+}
+
+.per-two {
+    grid-area: per-two;   
+}
+
+.per-three {
+    grid-area: per-three; 
+    background-color: hsl(172, 67%, 45%);  
+}
+
+.per-four {
+    grid-area: per-four;   
+}
+
+.per-five {
+    grid-area: per-five;   
+}
+
+.per-six {
+    grid-area: per-six;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(172, 67%, 45%);   
+}
+
+/* Input percent boxes End */
+
+/* xxxxxxxx LEFT CARD STYLING ENDS xxxxxxxxx */
+
+/* ------- RIGHT OUTPUT STYLING STARTS --------- */
+
+.right-output-div {
+    background-color: hsl(183, 100%, 15%);
+    padding: 1rem;
+    border-radius: 1rem;   
+}
+
+.right-output-display {
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+}
+
+.right-output-display p{
+    margin: 0.5rem 3rem 0.5rem auto;
+    color: white;
+}
+
+.price-output {
+    color: hsl(172, 67%, 45%);
+    font-size: 1.6rem;
+}
+
+.right-output-div button {
+    margin-top: 7rem;
+    border: none;
+    border-radius: 0.2rem;
+    width: 100%;
+    background-color: hsl(172, 67%, 45%);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.right-output-div button:hover {
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(172, 67%, 45%);
+}
+
+/* xxxxxxx RIGHT OUTPUT STYLING ENDS xxxxxxxxxxx */
+
+
+/* xxxxxxxxx STYLIING FOR CARD AND COMPONENTS ENDS xxxxxxxxxxx */
